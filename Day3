@@ -1,0 +1,131 @@
+# Q1
+
+
+l1 = [3,5,6,8,7,4,2]
+
+sq_lst = []
+
+for i in l1:
+
+    s = i*i
+    
+    sq_lst.append(s)
+    
+print(sq_lst)
+
+
+# Q2
+
+
+l1 = [8,2,4,3.14,'divya',5,6,'neha',5.68,'rutuja']
+
+intgr = []
+
+flt = []
+
+strng = []
+
+for i in l1:
+
+    if type(i) ==int:
+    
+        intgr.append(i)
+        
+        
+    elif type(i) ==float:
+    
+        flt.append(i)
+        
+    else:
+    
+        strng.append(i)
+        
+print(intgr)
+
+print(flt)
+
+print(strng)
+
+
+# Q3
+
+
+n = int(input("Enter number"))
+
+for i in range(1,n+1):
+
+    for j in range(1,i+1):
+    
+        print(j, end= " ")
+        
+    print("\n")
+    
+
+# Q4
+
+import numpy as np
+
+lst1 = []
+
+lst2 = []
+
+n = int(input("Enter numbers for matrix"))
+
+for i in range(1,n+1):
+
+    num = int(input("Enter numbers for Array1"))
+    
+    lst1.append(num)
+    
+for j in range(1,n+1):
+
+    num = int(input("Enter numbers for Array2"))
+    
+    lst2.append(num)
+    
+    
+arr1 = np.array(lst1)
+
+arr2 = np.array(lst2)
+
+arr1 = arr1.reshape(3,3)
+
+arr2 = arr2.reshape(3,3)
+
+print(arr1)
+
+print(arr2)
+
+add = [[arr1[i][j]+ arr2[i][j] for j in range(len(arr1[0]))] for i in range(len(arr1))]
+
+for k in add:
+
+    print(k)
+    
+
+
+# Q5
+
+
+n = int(input("Enter number"))
+
+m = n
+
+cube = 0
+
+while(n!=0):
+
+    quo = n%10
+    
+    cube = (quo**3)+cube
+    
+    n = n//10
+    
+if m == cube:
+
+    print("Is narcissitic")
+    
+else:
+
+    print("Is not narcissitic")
+    
